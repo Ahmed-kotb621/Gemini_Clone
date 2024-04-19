@@ -1,0 +1,14 @@
+.mainn {
+  flex: 1;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.main-container {
+  max-width: 900px;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

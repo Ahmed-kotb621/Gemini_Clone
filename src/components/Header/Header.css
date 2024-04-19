@@ -1,0 +1,16 @@
+.head-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head-nav p {
+  font-size: 22px;
+  color: rgb(102, 100, 100);
+}
+
+.head-nav img {
+  width: 40px;
+  border-radius: 50%;
+}

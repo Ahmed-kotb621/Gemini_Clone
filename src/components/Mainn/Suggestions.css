@@ -1,0 +1,29 @@
+.suggestions {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+.suggestions .card {
+  background-color: #f0f4f9;
+  padding: 15px;
+  font-size: 17px;
+  border-radius: 15px;
+  color: grey;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  height: 200px;
+  cursor: pointer;
+  justify-content: space-between;
+}
+.suggestions .card img {
+  width: 30px;
+  margin-left: auto;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.suggestions .card:hover {
+  background-color: #e6eaf1;
+}

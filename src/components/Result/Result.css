@@ -1,0 +1,34 @@
+.result-main {
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 16px;
+  flex: 1;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.result-main .prompt,
+.answer {
+  display: flex;
+  gap: 20px;
+}
+
+.result-main .prompt {
+  align-items: center;
+}
+.result-main .prompt img,
+.answer img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.result-main .answer {
+  margin-top: 40px;
+  line-height: 1.8;
+}
+
+.result-main .answer .image {
+  height: 100%;
+  display: flex;
+}
