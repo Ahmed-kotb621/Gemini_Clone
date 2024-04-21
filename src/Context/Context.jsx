@@ -11,16 +11,23 @@ const ContextProvider = (props) => {
   const [showResult, setShowResult] = useState(false);
   const [result, setResult] = useState("");
 
-  const addPrompt = (promt) => {
-    setPrevPrompt((prev) => [...prev, promt]);
+  const addPrompt = (prompt) => {
+    setPrevPrompt((prev) => [...prev, prompt]);
   };
 
-  const onSent = async () => {
+  const onSent = async (prompt) => {
     setResult("");
     setIsLoading(true);
     setShowResult(true);
     setRecentPrompt(input);
-    const response = await runChat(input);
+    let response;
+
+    // handle response from input field or prev. prompt
+    if (prompt !== undefined) {
+      response = await runChat(prompt);
+    } else {
+      response = await runChat(input);
+    }
 
     let splitedResonse = response.split("**");
     let newResponse = "";
@@ -47,8 +54,8 @@ const ContextProvider = (props) => {
       }, 75 * i);
     }
 
-    // adding new prompt to prev. prompts
-    addPrompt(input);
+    // adding new prompt to prev. promptss
+    input === "" ? null : addPrompt(input);
     setIsLoading(false);
     setInput("");
   };

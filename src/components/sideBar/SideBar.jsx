@@ -1,14 +1,25 @@
 import { useState } from "react";
 import { assets } from "../../assets/assets";
-import "./SideBar.css";
 import { useContext } from "react";
 import { Context } from "../../Context/Context";
+import "./SideBar.css";
+
 function SideBar() {
   const [expanded, setIsExpanded] = useState(true);
+  const { prevPrompt, onSent, setRecentPrompt, setShowResult } =
+    useContext(Context);
 
+  // negate side bar expand
   function handleExpanded() {
-    setIsExpanded((isExpadned) => !isExpadned);
+    setIsExpanded((isExpanded) => !isExpanded);
   }
+
+  // show prev. prompt again
+  function handlePreviousPrompt(prompt) {
+    onSent(prompt);
+    setRecentPrompt(prompt);
+  }
+
   return (
     <div className="sidebar">
       <div className="top">
@@ -19,7 +30,7 @@ function SideBar() {
           onClick={() => handleExpanded()}
         />
 
-        <div className="new-chat">
+        <div className="new-chat" onClick={() => setShowResult(false)}>
           <img src={assets.plus_icon} alt="" />
           {expanded && <p>New Chat</p>}
         </div>
@@ -27,10 +38,19 @@ function SideBar() {
         {expanded && (
           <div className="recent">
             <p className="recent-title">Recent</p>
-            <div className="recent-chats">
-              <img src={assets.message_icon} alt="message" />
-              <p>What is React...</p>
-            </div>
+            {prevPrompt.map((element) => {
+              return (
+                <>
+                  <div
+                    className="recent-chats"
+                    onClick={() => handlePreviousPrompt(element)}
+                  >
+                    <img src={assets.message_icon} alt="message" />
+                    <p>{element.slice(0, 18) + "..."}</p>
+                  </div>
+                </>
+              );
+            })}
           </div>
         )}
       </div>

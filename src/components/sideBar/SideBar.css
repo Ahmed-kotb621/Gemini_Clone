@@ -28,6 +28,11 @@
   cursor: pointer;
   font-size: 14px;
   color: gray;
+  transition: 0.3s;
+}
+
+.sidebar .new-chat:hover {
+  background-color: #bec6d3e6;
 }
 
 .sidebar .recent {

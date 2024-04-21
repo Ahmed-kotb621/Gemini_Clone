@@ -2,13 +2,13 @@ import { useContext, useState } from "react";
 import Header from "../Header/Header";
 import Caution from "./Caution";
 import Greeting from "./Greeting";
-import "./Mainn.css";
 import Search from "./Search";
 import Suggestions from "./Suggestions";
 import Result from "../Result/Result";
 import { Context } from "../../Context/Context";
+import "./Mainn.css";
 function Mainn() {
-  const { isLoading, showResult } = useContext(Context);
+  const { showResult } = useContext(Context);
 
   return (
     <main className="mainn">
