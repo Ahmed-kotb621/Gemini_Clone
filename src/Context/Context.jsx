@@ -43,6 +43,9 @@ const ContextProvider = (props) => {
 
     // break new line after each definition
     let breakedResponse = newResponse.split("*").join("</br>");
+    // code block
+    let codeBlock = breakedResponse.split("```");
+    console.log(codeBlock);
     let typingResponse = breakedResponse.split(" ");
     let del = "";
 

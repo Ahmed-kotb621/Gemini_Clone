@@ -4,6 +4,9 @@ import { Context } from "../../Context/Context";
 import "./Result.css";
 import Loader from "../Loader/Loader";
 
+import MyCodeComponent from "../Mainn/CodeBlock";
+import MyCoolCodeBlock from "../Mainn/CodeBlock";
+
 function Result() {
   const { recentPrompt, isLoading, result } = useContext(Context);
   return (
@@ -20,7 +23,13 @@ function Result() {
         {isLoading ? (
           <Loader />
         ) : (
-          <div dangerouslySetInnerHTML={{ __html: result }} />
+          <MyCoolCodeBlock
+            code="const x = 50;"
+            language="jsx"
+            showLineNumbers="true"
+          />
+          //   <div dangerouslySetInnerHTML={{ __html: result }} />
+          // </MyCoolCodeBlock>
         )}
       </div>
     </div>
