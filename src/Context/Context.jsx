@@ -43,17 +43,15 @@ const ContextProvider = (props) => {
 
     // break new line after each definition
     let breakedResponse = newResponse.split("*").join("</br>");
-    // code block
-    let codeBlock = breakedResponse.split("```");
-    console.log(codeBlock);
+
     let typingResponse = breakedResponse.split(" ");
-    let del = "";
+    let delay = "";
 
     // adding delay on displaying response (typing effect)
     for (let i = 0; i < typingResponse.length; i++) {
       setTimeout(() => {
-        del += typingResponse[i] + " ";
-        setResult(del);
+        delay += typingResponse[i] + " ";
+        setResult(delay);
       }, 75 * i);
     }
 

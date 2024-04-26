@@ -3,8 +3,9 @@
   min-height: 100vh;
   display: inline-flex;
   flex-direction: column;
-  background-color: #f0f4f9;
+  background-color: var(--surface-container);
   justify-content: space-between;
+  color: var(--text-color);
 }
 
 .sidebar img {
@@ -23,16 +24,16 @@
   align-items: center;
   gap: 10px;
   padding: 10px 15px;
-  background-color: #e6eaf1;
+  background-color: var(--background-container);
   border-radius: 50px;
   cursor: pointer;
   font-size: 14px;
-  color: gray;
+  color: var(--text-color);
   transition: 0.3s;
 }
 
 .sidebar .new-chat:hover {
-  background-color: #bec6d3e6;
+  background-color: var(--surface-container);
 }
 
 .sidebar .recent {
@@ -51,13 +52,13 @@
   align-items: center;
   padding: 10px 40px 10px 10px;
   border-radius: 50px;
-  color: #282828;
+  color: var(--text-color);
   cursor: pointer;
 }
 
 .sidebar .recent-chats:hover,
 .sidebar .down .down-entry:hover {
-  background-color: #e6eaf1;
+  background-color: var(--surface-container);
 }
 
 .sidebar .down {
@@ -72,6 +73,6 @@
   align-items: center;
   padding: 10px;
   border-radius: 50px;
-  color: #282828;
+  color: var(--text-color);
   cursor: pointer;
 }

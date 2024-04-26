@@ -5,11 +5,11 @@
   gap: 20px;
 }
 .suggestions .card {
-  background-color: #f0f4f9;
+  background-color: var(--surface-container);
   padding: 15px;
   font-size: 17px;
   border-radius: 15px;
-  color: grey;
+  color: var(--text-color);
   display: flex;
   flex-direction: column;
   gap: 60px;

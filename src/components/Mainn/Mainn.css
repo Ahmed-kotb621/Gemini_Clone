@@ -5,6 +5,7 @@
 }
 
 .main-container {
+  background-color: var(--main-background);
   max-width: 900px;
   height: 100%;
   margin: auto;

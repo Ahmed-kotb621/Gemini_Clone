@@ -23,12 +23,14 @@ function Result() {
         {isLoading ? (
           <Loader />
         ) : (
+          /*
           <MyCoolCodeBlock
             code="const x = 50;"
             language="jsx"
             showLineNumbers="true"
           />
-          //   <div dangerouslySetInnerHTML={{ __html: result }} />
+          */
+          <div dangerouslySetInnerHTML={{ __html: result }} />
           // </MyCoolCodeBlock>
         )}
       </div>

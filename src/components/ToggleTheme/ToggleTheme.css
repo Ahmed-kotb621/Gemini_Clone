@@ -1,0 +1,7 @@
+.toggle-btn {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: var(--text-color-grey);
+  cursor: pointer;
+}

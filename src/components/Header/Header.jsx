@@ -1,5 +1,7 @@
 import userImage from "../../assets/user_icon.png";
 import "./Header.css";
+import ToggleTheme from "../ToggleTheme/ToggleTheme";
+
 function Header() {
   return (
     <nav>
@@ -11,6 +13,7 @@ function Header() {
           <img src={userImage} />
         </li>
       </ul>
+      <ToggleTheme />
     </nav>
   );
 }

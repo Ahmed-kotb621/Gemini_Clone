@@ -8,7 +8,24 @@
   font-family: "Outfit", sans-serif;
 }
 
-#root {
-  min-height: 100vh;
-  display: flex;
+.light-mode {
+  #root {
+    background: #fff;
+    min-height: 100vh;
+    display: flex;
+    --text-color: gray;
+    --surface-container: #f0f4f9;
+  }
+}
+
+.dark-mode {
+  #root {
+    background: #131314;
+    min-height: 100vh;
+    display: flex;
+
+    --surface-container: #1e1f20;
+    --text-color: #fff;
+    --background-container: #131314;
+  }
 }
