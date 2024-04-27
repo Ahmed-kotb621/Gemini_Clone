@@ -2,7 +2,8 @@ import { useState } from "react";
 import { assets } from "../../assets/assets";
 import { useContext } from "react";
 import { Context } from "../../Context/Context";
-import "./SideBar.css";
+//import "./SideBar.css";
+import "./SideBar.module.css";
 
 function SideBar() {
   const [expanded, setIsExpanded] = useState(true);

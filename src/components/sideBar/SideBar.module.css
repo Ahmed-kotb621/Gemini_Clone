@@ -13,4 +13,8 @@
 
 .dark-mode #root {
   display: flex;
-}/*# sourceMappingURL=index.css.map */
+}
+
+.sidebar {
+  background-color: red;
+}/*# sourceMappingURL=SideBar.module.css.map */

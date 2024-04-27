@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Outfit", sans-serif;
+}
+
+@mixin main-root {
+  display: flex;
+}
+
+.light-mode {
+  #root {
+    $main-color: #fff;
+    $secondary-color: #f0f4f9;
+    $icon-color: #3c4043;
+    $font-color: #1f1f1f;
+    $font-variant: #c4c7c5;
+    @include main-root;
+  }
+}
+
+.dark-mode {
+  #root {
+    $main-color: #131314;
+    $secondary-color: #1e1f20;
+    $icon-color: #e3e3e3;
+    $font-color: #dadce0;
+    $font-variant: #444746;
+    @include main-root;
+  }
+}
