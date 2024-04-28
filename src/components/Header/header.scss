@@ -1,0 +1,31 @@
+@use "../../styles/global.scss" as *;
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.head-nav,
+.head-nav-dark {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $main-color;
+
+  p {
+    font-size: 22px;
+    color: $font-color;
+  }
+
+  img {
+    width: 40px;
+    border-radius: 50%;
+  }
+}
+
+.head-nav-dark {
+  background-color: $main-color-dark;
+  p {
+    color: $font-color-dark;
+  }
+}

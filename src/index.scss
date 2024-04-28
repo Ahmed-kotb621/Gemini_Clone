@@ -8,10 +8,28 @@
   font-family: "Outfit", sans-serif;
 }
 
-@mixin main-root {
+#root {
   display: flex;
+
+  &,
+  &.light-mode {
+    $main-color: #fff;
+    $secondary-color: #f0f4f9;
+    $icon-color: #3c4043;
+    $font-color: #1f1f1f;
+    $font-variant: #c4c7c5;
+  }
+
+  &.dark-mode {
+    $main-color: #131314;
+    $secondary-color: #1e1f20;
+    $icon-color: #e3e3e3;
+    $font-color: #dadce0;
+    $font-variant: #444746;
+  }
 }
 
+/*
 .light-mode {
   #root {
     $main-color: #fff;
@@ -33,3 +51,5 @@
     @include main-root;
   }
 }
+
+*/

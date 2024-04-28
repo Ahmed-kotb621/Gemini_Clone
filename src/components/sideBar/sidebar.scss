@@ -1,0 +1,98 @@
+@use "../../styles/global.scss" as *;
+
+.sidebar,
+.sidebar-dark {
+  padding: 25px 15px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: $secondary-color;
+  color: $font-color;
+
+  img {
+    width: 20px;
+  }
+  .menu {
+    display: block;
+
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .new-chat {
+    margin-top: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: $chat-color;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    color: $font-color;
+    transition: 0.3s;
+    &:hover {
+      background-color: $chat-color-hover;
+    }
+  }
+
+  .recent-title {
+    margin: 30px 0 20px;
+  }
+  .recent-chats {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 40px 10px 10px;
+    border-radius: 50px;
+    color: $icon-color;
+    cursor: pointer;
+    &:hover {
+      background-color: $chat-color;
+    }
+  }
+
+  .down {
+    display: flex;
+    flex-direction: column;
+
+    .down-entry {
+      display: flex;
+      justify-content: start;
+      gap: 10px;
+      align-items: center;
+      padding: 10px;
+      border-radius: 50px;
+      color: var(--text-color);
+      cursor: pointer;
+      &:hover {
+        background-color: $chat-color;
+      }
+    }
+  }
+}
+// dark theme
+.sidebar-dark {
+  background-color: $secondary-color-dark;
+  color: $font-color-dark;
+
+  .new-chat {
+    color: $font-color-dark;
+    transition: 0.3s;
+    &:hover {
+      background-color: $chat-color-hover;
+    }
+  }
+
+  .recent-chats {
+    color: $icon-color-dark;
+  }
+
+  .down {
+    .down-entry {
+      color: $icon-color-dark;
+    }
+  }
+}

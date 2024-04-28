@@ -1,0 +1,46 @@
+@use "../../styles/global.scss" as *;
+.result-main,
+.result-main-dark {
+  margin-top: 50px;
+  padding: 20px;
+  font-size: 16px;
+
+  overflow-y: scroll;
+
+  scrollbar-width: none;
+  .prompt,
+  .answer {
+    display: flex;
+    gap: 20px;
+  }
+  .answer {
+    margin-top: 40px;
+    line-height: 1.8;
+    .image {
+      height: 100%;
+      display: flex;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+    .result-text {
+      background-color: red;
+      height: 50%;
+      overflow: hidden;
+    }
+  }
+  .prompt {
+    align-items: center;
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.result-main-dark {
+  color: $font-color-dark;
+}

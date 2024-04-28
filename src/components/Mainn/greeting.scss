@@ -1,0 +1,22 @@
+@use "../../styles/global.scss" as *;
+.greet-main {
+  margin-top: 50px;
+  font-size: 56px;
+  font-weight: 500;
+  .greet-grad {
+    width: fit-content;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 255, 0.806),
+      rgba(255, 0, 0, 0.564)
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  .greet-grey-dark {
+    color: $font-variant-dark;
+  }
+  .greet-grey {
+    color: $font-variant;
+  }
+}

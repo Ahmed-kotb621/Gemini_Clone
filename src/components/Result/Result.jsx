@@ -1,16 +1,18 @@
 import { useContext } from "react";
 import { assets } from "../../assets/assets";
 import { Context } from "../../Context/Context";
-import "./Result.css";
 import Loader from "../Loader/Loader";
+import "./result.scss";
 
 import MyCodeComponent from "../Mainn/CodeBlock";
 import MyCoolCodeBlock from "../Mainn/CodeBlock";
+import { ThemeContext } from "../../Context/ThemeContext";
 
 function Result() {
   const { recentPrompt, isLoading, result } = useContext(Context);
+  const { isDark } = useContext(ThemeContext);
   return (
-    <div className="result-main">
+    <div className={`${isDark ? "result-main-dark" : "result-main"}`}>
       <div className="prompt">
         <img src={assets.user_icon} alt="user avatar" />
         <p>{recentPrompt}</p>
@@ -30,7 +32,10 @@ function Result() {
             showLineNumbers="true"
           />
           */
-          <div dangerouslySetInnerHTML={{ __html: result }} />
+          <div
+            className="result-text"
+            dangerouslySetInnerHTML={{ __html: result }}
+          />
           // </MyCoolCodeBlock>
         )}
       </div>

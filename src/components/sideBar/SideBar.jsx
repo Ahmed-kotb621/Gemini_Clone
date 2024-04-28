@@ -2,11 +2,11 @@ import { useState } from "react";
 import { assets } from "../../assets/assets";
 import { useContext } from "react";
 import { Context } from "../../Context/Context";
-//import "./SideBar.css";
-import "./SideBar.module.css";
-
+import "./sidebar.scss";
+import { ThemeContext } from "../../Context/ThemeContext";
 function SideBar() {
   const [expanded, setIsExpanded] = useState(true);
+  const { isDark } = useContext(ThemeContext);
   const { prevPrompt, onSent, setRecentPrompt, setShowResult } =
     useContext(Context);
 
@@ -22,7 +22,7 @@ function SideBar() {
   }
 
   return (
-    <div className="sidebar">
+    <div className={`${isDark ? "sidebar-dark" : "sidebar"}`}>
       <div className="top">
         <img
           src={assets.menu_icon}

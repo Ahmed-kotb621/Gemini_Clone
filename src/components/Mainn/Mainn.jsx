@@ -6,14 +6,16 @@ import Search from "./Search";
 import Suggestions from "./Suggestions";
 import Result from "../Result/Result";
 import { Context } from "../../Context/Context";
-import "./Mainn.css";
+import "./main.scss";
+import { ThemeContext } from "../../Context/ThemeContext";
 function Mainn() {
   const { showResult } = useContext(Context);
+  const { isDark } = useContext(ThemeContext);
 
   return (
-    <main className="mainn">
+    <main className={`${isDark ? "mainn-dark" : "mainn"}`}>
       <Header />
-      <div className="main-container">
+      <div className={`${isDark ? "main-container-dark" : "main-container"}`}>
         {!showResult ? (
           <>
             <Greeting />

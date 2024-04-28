@@ -1,0 +1,52 @@
+@use "../../styles/global.scss" as *;
+.suggestions {
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+
+  .card,
+  .card-dark {
+    background-color: $secondary-color;
+    padding: 15px;
+    font-size: 17px;
+    border-radius: 15px;
+    color: $font-color;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    height: 200px;
+    cursor: pointer;
+    justify-content: space-between;
+
+    &:hover {
+      background-color: #e6eaf1;
+    }
+
+    img {
+      width: 30px;
+      margin-left: auto;
+      background-color: $main-color;
+      border-radius: 50%;
+    }
+  }
+}
+
+.suggestions {
+  .card-dark {
+    background-color: $secondary-color-dark;
+    color: $font-color-dark;
+
+    &:hover {
+      background-color: $font-variant-dark;
+    }
+
+    img {
+      padding: 5px;
+      width: 40px;
+      margin-left: auto;
+      background-color: $main-color-dark;
+      border-radius: 50%;
+    }
+  }
+}

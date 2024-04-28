@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { assets } from "../../assets/assets";
-import "./Suggestions.css";
+import "./suggestions.scss";
 import { Context } from "../../Context/Context";
+import { ThemeContext } from "../../Context/ThemeContext";
 function Suggestions() {
   const { onSent, setRecentPrompt } = useContext(Context);
+  const { isDark } = useContext(ThemeContext);
   const suggestions = [
     {
       message: "Suggest beautiful places to see on an upcoming road trip",
@@ -32,7 +34,7 @@ function Suggestions() {
       {suggestions.map((suggest, index) => {
         return (
           <div
-            className="card"
+            className={`${isDark ? "card-dark" : "card"}`}
             key={index}
             onClick={() => handleSuggestions(suggest)}
           >

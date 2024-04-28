@@ -1,0 +1,22 @@
+@use "../../styles/global.scss" as *;
+.mainn,
+.mainn-dark {
+  flex: 1;
+  padding: 20px;
+  height: 100vh;
+}
+
+.main-container,
+.main-container-dark {
+  background-color: $main-color;
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mainn-dark,
+.main-container-dark {
+  background-color: $main-color-dark;
+}
