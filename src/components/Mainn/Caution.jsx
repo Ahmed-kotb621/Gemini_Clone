@@ -1,4 +1,4 @@
-import "./Caution.css";
+import "./caution.scss";
 function Caution() {
   return (
     <div className="caution">

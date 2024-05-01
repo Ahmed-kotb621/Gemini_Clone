@@ -96,3 +96,12 @@
     }
   }
 }
+
+// responsive design
+
+@media ($mobile-screen) {
+  .sidebar,
+  .sidebar-dark {
+    display: none;
+  }
+}
